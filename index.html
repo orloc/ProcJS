@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>A Processing.js Example</title>
+        <script type="text/javascript" src="bower_components/Processing.js/processing.js"></script>
+        <script type="text/javascript" src="objects/walker.js"></script>
+    </head>
+    <body>
+        <h1>A Processing.js Example</h1>
+        <canvas id="main" height="200" width="200"></canvas>
+    </body>
+    <script type="text/javascript">
+        window.onload = function(){
+            var canvas = document.getElementById("main");
+            // attaching the sketchProc function to the canvas
+            var p = new Processing(canvas, OWalker);
+            // p.exit(); to detach it
+        };
+    </script>
+</html>

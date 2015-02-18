@@ -1,0 +1,22 @@
+{
+  "name": "p5js",
+  "version": "0.0.0",
+  "authors": [
+    "Grant Tepper <grant.tepper@gmail.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Processing.js": "~1.4.9"
+  }
+}
