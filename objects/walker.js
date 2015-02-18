@@ -2,8 +2,13 @@ var OWalker = function(p){
 
     var x = 0;
     var y = 0;
+    var tx = 0;
+    var ty = 10000;
 
-    function init(width, height) {
+    var width = 640; 
+    var height = 360;
+
+    function init() {
         x = width/2;
         y = height/2;
     }
@@ -13,24 +18,21 @@ var OWalker = function(p){
     }
 
     function display() {
-        p.noStroke();
-        p.fill(getRandomArbitrary(0,255),getRandomArbitrary(0,255),getRandomArbitrary(0,255));
+        p.fill(200);
         p.ellipse(x,y, 16, 16);
     }
 
     function step() {
-        var choice = parseInt(getRandomArbitrary(0,4));
-        switch(choice){
-            case 0: x = x+5; break;
-            case 1: x = x-5; break;
-            case 2: y = y+5; break;
-            case 3: y = y-5; break;
-        }
+        x = p.map(p.noise(tx), 0, 1, 0, width);
+        y = p.map(p.noise(ty), 0, 1, 0, height);
+
+        tx+= 0.01;
+        ty+= 0.01;
+        
     }
 
     p.setup = function(){
-        var width = 640; 
-        var height = 360;
+        p.frameRate(30);
         p.size(width, height);
         init(width, height);
     }
