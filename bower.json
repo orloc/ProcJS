@@ -17,6 +17,7 @@
     "tests"
   ],
   "dependencies": {
-    "Processing.js": "~1.4.9"
+    "Processing.js": "~1.4.9",
+    "noisejs":"git@github.com:josephg/noisejs.git"
   }
 }
